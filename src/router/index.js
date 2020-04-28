@@ -11,25 +11,44 @@ const routes = [
     component: Home
   },
   {
-    path: '/about',
-    name: 'About',
+    path: '/Teams',
+    name: 'Teams',
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+    component: () => import(/* webpackChunkName: "about" */ '../views/Teams.vue')
   },
   {
-    path: '/HyperScalers',
-    name: 'HyperScalers',
+    path: '/TeamMembers',
+    name: 'TeamMembers',
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/HyperScalers.vue')
+    component: () => import(/* webpackChunkName: "about" */ '../views/TeamMembers.vue'),
+    props: true,
+  },
+  {
+    path: '/AddRepo',
+    name: 'AddRepo',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "about" */ '../views/AddRepo.vue')
+  },
+  {
+    path: '/Categories',
+    name: 'Categories',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "about" */ '../views/Categories.vue'),
+    props: true,
   }
 ]
 
 const router = new VueRouter({
-  routes
+  routes,
+  mode: 'history'
 })
 
 export default router

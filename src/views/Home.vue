@@ -6,7 +6,7 @@
           <NavBar />
         </b-col>
         <b-col cols="8" xl="8">
-          <HelloWorld2 msg="Welcome to Your Vue.js App" />
+          <Main msg="Welcome to Your Vue.js App" />
         </b-col>
         <b-col xl="2">
           <SideView />
@@ -19,14 +19,14 @@
 <script>
 // @ is an alias to /src
 import NavBar from "@/components/NavBar.vue";
-import HelloWorld2 from "@/components/HelloWorld2.vue";
+import Main from "@/components/Main.vue";
 import SideView from "@/components/SideView.vue";
 
 export default {
   name: "Home",
   components: {
     NavBar,
-    HelloWorld2,
+    Main,
     SideView
   }
 };

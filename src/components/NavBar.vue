@@ -4,21 +4,29 @@
       <b-nav vertical class="w-25">
 
         <p style="font-size: 60px;">
-          <b-icon-list v-b-toggle.collapse-1></b-icon-list>
+          <b-icon-list v-b-toggle.sidebar-variant></b-icon-list>
         </p>
 
-        <b-collapse id="collapse-1" class="mt-2">
+        <b-sidebar id="sidebar-variant" title="" bg-variant="white" text-variant="dark" shadow>
 
-          <b-nav-item @click="Github()" active>GitHub</b-nav-item>
+            
+      <p>
+        <img style="width: 35%;" src="../assets/SLV.png" />
+      </p>
+     
+          <b-nav-item @click="Github()" active>GitHub</b-nav-item> <br>
           <b-nav-item>
             <router-link to="/">Home</router-link>
-          </b-nav-item>
+          </b-nav-item><br>
           <b-nav-item>
-            <router-link to="/about">About</router-link>
-          </b-nav-item>
+            <router-link to="/Teams">Teams</router-link>
+          </b-nav-item><br>
+          <b-nav-item>
+            <router-link to="/AddRepo">AddRepo</router-link>
+          </b-nav-item><br>
           <b-nav-item @click="JamPage()">JamPage</b-nav-item>
           
-        </b-collapse>
+        </b-sidebar>
 
       </b-nav>
     </div>
